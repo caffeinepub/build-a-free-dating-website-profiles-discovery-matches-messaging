@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a free dating website platform.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Modern romantic abstract hero illustration with diverse silhouettes and soft warm gradients (dating-hero.dim_1600x900.png)\n- Minimal heart + chat bubble logo mark, flat vector style, warm color palette, transparent background (dating-logo.dim_512x512.png)\n- Set of 6 small outline icons for: profile, discover, matches, messages, settings, safety; consistent stroke and style (dating-icons.dim_256x256.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-internet-identity-sign-in-and-require-authentication-for-all-dating-features-profile-creation-browsing-likes-matches-messaging",
+      "title": "Implement Internet Identity sign-in and require authentication for all dating features (profile creation, browsing, likes, matches, messaging).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-non-real-time-messaging-between-matched-users-allow-sending-messages-within-a-match-listing-conversation-history-and-showing-an-inbox-of-matches-with-last-message-preview-and-unread-counts",
+      "title": "Implement non-real-time messaging between matched users: allow sending messages within a match, listing conversation history, and showing an inbox of matches with last message preview and unread counts.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-safety-features-block-and-report-blocking-prevents-the-blocked-user-from-appearing-in-discovery-matching-or-messaging-reporting-stores-a-reason-and-optional-text-note-for-moderation-review-admin-ui-not-required",
+      "title": "Add safety features: block and report. Blocking prevents the blocked user from appearing in discovery, matching, or messaging; reporting stores a reason and optional text note for moderation review (admin UI not required).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-core-frontend-pages-and-navigation-1-public-landing-page-2-onboarding-create-profile-3-edit-profile-4-discovery-swipe-card-ui-with-like-pass-5-matches-list-6-messages-inbox-conversation-7-settings-sign-out-block-list",
+      "title": "Create the core frontend pages and navigation: (1) Public landing page, (2) Onboarding/Create Profile, (3) Edit Profile, (4) Discovery (swipe/card UI with Like/Pass), (5) Matches list, (6) Messages (inbox + conversation), (7) Settings (sign out, block list).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-react-query-for-all-backend-calls-and-ensure-loading-empty-error-states-are-implemented-for-profile-loading-discovery-feed-matches-and-messages",
+      "title": "Use React Query for all backend calls and ensure loading/empty/error states are implemented for profile loading, discovery feed, matches, and messages.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-define-a-coherent-distinctive-visual-theme-for-the-dating-site-ui-colors-typography-spacing-components-and-interaction-patterns-and-apply-it-consistently-across-all-pages",
+      "title": "Define a coherent, distinctive visual theme for the dating site UI (colors, typography, spacing, components, and interaction patterns) and apply it consistently across all pages.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-photo-handling-ux-for-profiles-allow-users-to-add-remove-reorder-a-small-set-of-photo-urls-or-selected-static-assets-and-display-them-in-discovery-cards-and-profile-views",
+      "title": "Add basic photo handling UX for profiles: allow users to add/remove/reorder a small set of photo URLs (or selected static assets) and display them in discovery cards and profile views.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-simple-terms-consent-gating-require-users-to-confirm-they-are-18-and-agree-to-basic-community-guidelines-during-onboarding-before-their-profile-is-activated-for-discovery",
+      "title": "Add simple terms/consent gating: require users to confirm they are 18+ and agree to basic community guidelines during onboarding before their profile is activated for discovery.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-required-static-image-assets-in-the-frontend-and-render-them-from-frontend-public-assets-generated-do-not-fetch-images-via-the-backend",
+      "title": "Generate and include required static image assets in the frontend and render them from frontend/public/assets/generated (do not fetch images via the backend).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a free dating website (core platform)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Create backend data models and persistence for dating user profiles, including at minimum: principal (owner), display name, age (18+), gender, interested-in, location (free-text), bio, interests/tags, photo gallery (image URLs/asset references), and timestamps (created/updated).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add backend APIs for discovery and search filters: fetch recommended profiles excluding self and blocked users, with optional filters (age range, gender, interested-in, interests/tags).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Implement backend like/pass actions and matching logic: users can like or pass a profile; a match is created when both users like each other; expose APIs to list likes sent, likes received (optional), and matches.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Build a free dating website (profiles, discovery, matches, messaging)",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

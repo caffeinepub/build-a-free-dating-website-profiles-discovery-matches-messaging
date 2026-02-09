@@ -1,0 +1,19 @@
+{
+  "frontend/src/App.tsx": "Main application router with authentication guard, route definitions for all pages (landing, onboarding, discovery, matches, messages, conversation, profile, settings), and theme provider setup.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations including profile management, discovery, likes/passes, matches, messaging, and safety features (block/report) with proper error handling and cache invalidation.",
+  "frontend/src/pages/LandingPage.tsx": "Public landing page with hero section, feature cards, and call-to-action for sign-in; redirects authenticated users to discovery.",
+  "frontend/src/pages/OnboardingPage.tsx": "Profile creation form with all required fields (name, age, gender, interests, photos), 18+ confirmation, and terms agreement checkboxes.",
+  "frontend/src/pages/DiscoveryPage.tsx": "Swipe-style discovery interface displaying profile cards with photos, bio, interests, and Like/Pass actions; includes block and report functionality.",
+  "frontend/src/pages/MatchesPage.tsx": "Tabbed interface showing mutual matches and sent likes with profile cards and navigation to conversations.",
+  "frontend/src/pages/MessagesInboxPage.tsx": "Inbox view listing all matches with last message preview, unread counts, and navigation to individual conversations.",
+  "frontend/src/pages/ConversationPage.tsx": "Chat interface for matched users with message history, real-time polling, and send message functionality.",
+  "frontend/src/pages/EditProfilePage.tsx": "Profile editing form pre-populated with current user data allowing updates to all profile fields including photos.",
+  "frontend/src/pages/SettingsPage.tsx": "Settings page with blocked users list and sign-out functionality.",
+  "frontend/src/components/layout/AuthedShell.tsx": "Authenticated layout wrapper with header, navigation (desktop and mobile), logo, and footer with attribution.",
+  "frontend/src/components/profile/PhotoManager.tsx": "Photo management component allowing users to add, remove, and reorder up to 5 photo URLs.",
+  "frontend/src/components/profile/PhotoCarousel.tsx": "Photo carousel component for displaying multiple photos with navigation controls and indicators.",
+  "frontend/src/components/safety/BlockButton.tsx": "Block user button with confirmation dialog that triggers block mutation and optional success callback.",
+  "frontend/src/components/safety/ReportDialog.tsx": "Report user dialog with reason selection and optional note submission.",
+  "frontend/src/index.css": "Global styles with OKLCH-based color system featuring rose/pink/purple gradient theme for light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended theme including custom colors, border radius, fonts (Inter), and shadows for the dating app aesthetic."
+}

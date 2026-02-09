@@ -1,0 +1,199 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-internet-identity-sign-in-and-require-authentication-for-all-dating-features-profile-creation-browsing-likes-matches-messaging",
+      "featureTitle": "Implement Internet Identity sign-in and require authentication for all dating features (profile creation, browsing, likes, matches, messaging).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/AuthedShell.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-non-real-time-messaging-between-matched-users-allow-sending-messages-within-a-match-listing-conversation-history-and-showing-an-inbox-of-matches-with-last-message-preview-and-unread-counts",
+      "featureTitle": "Implement non-real-time messaging between matched users: allow sending messages within a match, listing conversation history, and showing an inbox of matches with last message preview and unread counts.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/ConversationPage.tsx",
+        "frontend/src/pages/MessagesInboxPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-safety-features-block-and-report-blocking-prevents-the-blocked-user-from-appearing-in-discovery-matching-or-messaging-reporting-stores-a-reason-and-optional-text-note-for-moderation-review-admin-ui-not-required",
+      "featureTitle": "Add safety features: block and report. Blocking prevents the blocked user from appearing in discovery, matching, or messaging; reporting stores a reason and optional text note for moderation review (admin UI not required).",
+      "files": [
+        "frontend/src/components/safety/BlockButton.tsx",
+        "frontend/src/components/safety/ReportDialog.tsx",
+        "frontend/src/pages/SettingsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-core-frontend-pages-and-navigation-1-public-landing-page-2-onboarding-create-profile-3-edit-profile-4-discovery-swipe-card-ui-with-like-pass-5-matches-list-6-messages-inbox-conversation-7-settings-sign-out-block-list",
+      "featureTitle": "Create the core frontend pages and navigation: (1) Public landing page, (2) Onboarding/Create Profile, (3) Edit Profile, (4) Discovery (swipe/card UI with Like/Pass), (5) Matches list, (6) Messages (inbox + conversation), (7) Settings (sign out, block list).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/DiscoveryPage.tsx",
+        "frontend/src/pages/EditProfilePage.tsx",
+        "frontend/src/pages/LandingPage.tsx",
+        "frontend/src/pages/MatchesPage.tsx",
+        "frontend/src/pages/MessagesInboxPage.tsx",
+        "frontend/src/pages/OnboardingPage.tsx",
+        "frontend/src/pages/SettingsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-use-react-query-for-all-backend-calls-and-ensure-loading-empty-error-states-are-implemented-for-profile-loading-discovery-feed-matches-and-messages",
+      "featureTitle": "Use React Query for all backend calls and ensure loading/empty/error states are implemented for profile loading, discovery feed, matches, and messages.",
+      "files": [
+        "frontend/src/pages/DiscoveryPage.tsx",
+        "frontend/src/pages/MatchesPage.tsx",
+        "frontend/src/pages/MessagesInboxPage.tsx",
+        "frontend/src/pages/OnboardingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-define-a-coherent-distinctive-visual-theme-for-the-dating-site-ui-colors-typography-spacing-components-and-interaction-patterns-and-apply-it-consistently-across-all-pages",
+      "featureTitle": "Define a coherent, distinctive visual theme for the dating site UI (colors, typography, spacing, components, and interaction patterns) and apply it consistently across all pages.",
+      "files": [
+        "frontend/src/components/layout/AuthedShell.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/LandingPage.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-basic-photo-handling-ux-for-profiles-allow-users-to-add-remove-reorder-a-small-set-of-photo-urls-or-selected-static-assets-and-display-them-in-discovery-cards-and-profile-views",
+      "featureTitle": "Add basic photo handling UX for profiles: allow users to add/remove/reorder a small set of photo URLs (or selected static assets) and display them in discovery cards and profile views.",
+      "files": [
+        "frontend/src/components/profile/PhotoCarousel.tsx",
+        "frontend/src/components/profile/PhotoManager.tsx",
+        "frontend/src/pages/DiscoveryPage.tsx",
+        "frontend/src/pages/EditProfilePage.tsx",
+        "frontend/src/pages/OnboardingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-simple-terms-consent-gating-require-users-to-confirm-they-are-18-and-agree-to-basic-community-guidelines-during-onboarding-before-their-profile-is-activated-for-discovery",
+      "featureTitle": "Add simple terms/consent gating: require users to confirm they are 18+ and agree to basic community guidelines during onboarding before their profile is activated for discovery.",
+      "files": [
+        "frontend/src/pages/DiscoveryPage.tsx",
+        "frontend/src/pages/OnboardingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-and-include-required-static-image-assets-in-the-frontend-and-render-them-from-frontend-public-assets-generated-do-not-fetch-images-via-the-backend",
+      "featureTitle": "Generate and include required static image assets in the frontend and render them from frontend/public/assets/generated (do not fetch images via the backend).",
+      "files": [
+        "frontend/src/pages/LandingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

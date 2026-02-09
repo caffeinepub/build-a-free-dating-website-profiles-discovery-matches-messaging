@@ -1,0 +1,71 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-09T22:10:51.970Z",
+  "summary": "Diff adds a Motoko backend actor with profile/like/match/message/report/block data types and a React/TanStack Router + React Query frontend with landing, onboarding, discovery, matches, inbox/conversation, profile edit, and settings pages. Several requirements appear implemented, but some items cannot be fully verified due to backend truncation and omitted files, and a few unrequested behaviors/text are introduced.",
+  "missing_requirements": [
+    {
+      "id": "REQ-12",
+      "requirement": "Generate and include required static image assets in frontend/public/assets/generated (hero, logo, and 6 small outline icons) and reference them from the frontend.",
+      "reason": "The frontend references the hero and logo paths, but the diff summary does not show the actual generated image files being added under frontend/public/assets/generated; the icon set is also not evidenced as present or used.",
+      "evidence": [
+        "frontend/src/pages/LandingPage.tsx",
+        "frontend/src/components/layout/AuthedShell.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Access-control initialization using a secret \"caffeineAdminToken\" URL parameter and a backend method _initializeAccessControlWithSecret.",
+      "reason": "BuildRequest does not mention admin tokens/secret-based access control bootstrapping; only Internet Identity auth is required.",
+      "evidence": [
+        "frontend/src/hooks/useActor.ts",
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Landing page marketing copy claims \"Chat with your matches in real-time\".",
+      "reason": "BuildRequest explicitly forbids real-time communication (no WebSockets) and requires messaging via polling/on-demand fetch; this text misrepresents the required behavior.",
+      "evidence": [
+        "frontend/src/pages/LandingPage.tsx"
+      ]
+    },
+    {
+      "description": "Footer includes external \"caffeine.ai\" referral link/branding.",
+      "reason": "Not requested in the BuildRequest requirements or acceptance criteria.",
+      "evidence": [
+        "frontend/src/components/layout/AuthedShell.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/layout/AuthedShell.tsx",
+    "frontend/src/components/profile/PhotoCarousel.tsx",
+    "frontend/src/components/profile/PhotoManager.tsx",
+    "frontend/src/components/safety/BlockButton.tsx",
+    "frontend/src/components/safety/ReportDialog.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/ConversationPage.tsx",
+    "frontend/src/pages/DiscoveryPage.tsx",
+    "frontend/src/pages/EditProfilePage.tsx",
+    "frontend/src/pages/LandingPage.tsx",
+    "frontend/src/pages/MatchesPage.tsx",
+    "frontend/src/pages/MessagesInboxPage.tsx",
+    "frontend/src/pages/OnboardingPage.tsx",
+    "frontend/src/pages/SettingsPage.tsx",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

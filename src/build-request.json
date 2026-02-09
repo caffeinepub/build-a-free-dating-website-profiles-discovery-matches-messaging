@@ -1,0 +1,248 @@
+{
+  "kind": "build_request",
+  "title": "Build a free dating website (profiles, discovery, matches, messaging)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement Internet Identity sign-in and require authentication for all dating features (profile creation, browsing, likes, matches, messaging).",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create free dating websites"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Unauthenticated users can view a public landing page but cannot access discovery, likes, matches, or messages.",
+        "Authenticated users are recognized by their Internet Identity principal and stay signed in across refreshes (until they sign out)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create backend data models and persistence for dating user profiles, including at minimum: principal (owner), display name, age (18+), gender, interested-in, location (free-text), bio, interests/tags, photo gallery (image URLs/asset references), and timestamps (created/updated).",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create free dating websites"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A signed-in user can create and update their own profile.",
+        "Profile updates overwrite previous values and update an updatedAt timestamp.",
+        "Profiles reject ages under 18 with a clear error message."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add backend APIs for discovery and search filters: fetch recommended profiles excluding self and blocked users, with optional filters (age range, gender, interested-in, interests/tags).",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create free dating websites"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Discovery results never include the signed-in user’s own profile.",
+        "Discovery results exclude profiles the signed-in user has blocked and profiles that have blocked the signed-in user.",
+        "Filters (age range, gender, interested-in, interests/tags) can be applied and affect returned results."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement backend like/pass actions and matching logic: users can like or pass a profile; a match is created when both users like each other; expose APIs to list likes sent, likes received (optional), and matches.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create free dating websites"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Liking a user twice is idempotent (does not create duplicates).",
+        "A match is created only when both users have liked each other.",
+        "Users can list their matches and see basic profile info for each match."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement non-real-time messaging between matched users: allow sending messages within a match, listing conversation history, and showing an inbox of matches with last message preview and unread counts.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create free dating websites"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A user can only send messages to a matched user; attempts without a match fail.",
+        "Messages are stored and can be retrieved in chronological order.",
+        "Inbox view shows each match, last message snippet, and an unread indicator/count per match."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add safety features: block and report. Blocking prevents the blocked user from appearing in discovery, matching, or messaging; reporting stores a reason and optional text note for moderation review (admin UI not required).",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create free dating websites"
+        ]
+      },
+      "acceptanceCriteria": [
+        "After blocking, neither user can message the other and neither appears in the other’s discovery results.",
+        "Users can submit a report against another profile with a selected reason and optional details; reports are stored in the backend."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create the core frontend pages and navigation: (1) Public landing page, (2) Onboarding/Create Profile, (3) Edit Profile, (4) Discovery (swipe/card UI with Like/Pass), (5) Matches list, (6) Messages (inbox + conversation), (7) Settings (sign out, block list).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create free dating websites"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can navigate between the core pages via a consistent header/tab navigation when signed in.",
+        "Discovery provides Like/Pass actions and immediately advances to the next profile after an action.",
+        "Matches and Messages pages are accessible only when signed in."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Use React Query for all backend calls and ensure loading/empty/error states are implemented for profile loading, discovery feed, matches, and messages.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create free dating websites"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All data-fetching views display a loading state while requests are in-flight.",
+        "Failures display a non-technical, user-facing error message in English and allow retry.",
+        "Empty states exist for: no profile yet, no discovery results, no matches, no messages."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Define a coherent, distinctive visual theme for the dating site UI (colors, typography, spacing, components, and interaction patterns) and apply it consistently across all pages.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create free dating websites"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The UI uses a consistent color palette and typography system across landing, discovery, profile, matches, and messaging.",
+        "Interactive elements (buttons, cards, inputs) share consistent styling and states (hover/disabled/loading)."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Add basic photo handling UX for profiles: allow users to add/remove/reorder a small set of photo URLs (or selected static assets) and display them in discovery cards and profile views.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create free dating websites"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can manage at least 1–5 photos for their profile (add/remove and reorder).",
+        "Discovery cards display the primary photo and allow viewing additional photos (carousel or gallery)."
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Add simple terms/consent gating: require users to confirm they are 18+ and agree to basic community guidelines during onboarding before their profile is activated for discovery.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create free dating websites"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Onboarding includes an 18+ confirmation and guidelines agreement checkbox.",
+        "Users who do not accept cannot activate their profile or appear in discovery."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Generate and include required static image assets in the frontend and render them from frontend/public/assets/generated (do not fetch images via the backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create free dating websites"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The generated images are present under frontend/public/assets/generated and referenced directly by the frontend.",
+        "The landing page displays the generated hero image and the app uses the generated logo asset in the header/branding."
+      ]
+    }
+  ],
+  "constraints": [
+    "Backend must remain a single Motoko actor (all logic in backend/main.mo).",
+    "Do not edit immutable frontend paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui (compose them instead).",
+    "Do not implement real-time communication (no WebSockets); messaging must work via polling or on-demand fetch.",
+    "Use English for all user-facing text."
+  ],
+  "nonGoals": [
+    "Paid subscriptions, payments, or premium features.",
+    "Admin/moderation dashboard UI.",
+    "Third-party authentication providers beyond Internet Identity.",
+    "Location maps, GPS-based discovery, or external geolocation services.",
+    "Video/voice calling or real-time chat indicators (typing/online status)."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Modern romantic abstract hero illustration with diverse silhouettes and soft warm gradients (dating-hero.dim_1600x900.png)",
+      "Minimal heart + chat bubble logo mark, flat vector style, warm color palette, transparent background (dating-logo.dim_512x512.png)",
+      "Set of 6 small outline icons for: profile, discover, matches, messages, settings, safety; consistent stroke and style (dating-icons.dim_256x256.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}
